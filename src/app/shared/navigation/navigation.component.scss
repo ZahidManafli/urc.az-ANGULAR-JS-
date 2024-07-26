@@ -1,0 +1,320 @@
+.row{
+  padding: calc(0.3rem + 0.5vw) 0;
+    background-color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  nav:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    img {
+      width: 8%;
+    }
+    .right-side {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      width: 850px;
+  
+      a {
+        text-align: center;
+        width: calc((850px / 9) - 3px);
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.678);
+        font-weight: 400;
+        font-size: calc(0.6rem + 0.5vw);
+      }
+      a:hover {
+        color: #000;
+      }
+      .user-login {
+        background-color: #e8c900;
+  
+        box-shadow: 0px 1px 2px #00000032;
+        width: calc((850px / 6) + 21px) !important;
+        height: calc(2rem + 0.5vw);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        transition: 0.2s linear;
+        cursor: pointer;
+        a {
+          color: #eeeeee;
+          width: 70%;
+          font-size: calc(0.6rem + 0.5vw);
+        }
+        &:hover a {
+          color: #ffffff;
+        }
+        i {
+          color: #eeeeee;
+        }
+        &:hover i {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  
+  nav:nth-child(2) {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    position: relative;
+    margin: 0 auto;
+    img {
+      width: 12%;
+    }
+    .hanburger-menu {
+      cursor: pointer;
+      width: calc(3.5rem + 0.5vw);
+      height: calc(3.5rem + 0.5vw);
+      padding: calc(0.3rem + 0.5vw);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: calc(0.2rem + 0.5vw);
+      border: 2px solid #fff;
+      border-radius: 6px;
+      position: relative;
+      div {
+        width: 70%;
+        height: calc(0.03rem + 0.45vw);
+        background-color: rgb(90, 90, 90);
+        border-radius: 10px;
+        position: absolute;
+      }
+  
+      div:nth-child(1) {
+        top: 15px;
+        &.active {
+          animation: turn_45_deg .4s ease-in-out forwards;
+        }
+        &.passive{
+          animation: turn_45_deg_oposite .4s ease-in-out forwards;;
+        }
+      }
+      div:nth-child(2) {
+          top: 25px;
+          &.active {
+            animation: opacity_none .1s ease-in-out forwards;
+          }
+          &.passive{
+              animation: opacity_none_oposite .7s ease-in-out forwards;
+          }
+      }
+      div:nth-child(3) {
+          top: 35px;
+          &.active {
+            animation: turn_oposite_45_deg .4s ease-in-out forwards;
+          }
+          &.passive{
+              animation: turn_oposite_45_deg_oposite .4s ease-in-out forwards;
+          }
+      }
+    }
+  }
+}
+.absolute_menu{
+  position: fixed;
+  z-index: 99;
+  display: none;
+  flex-direction: column;
+  justify-content: left;
+  align-items: baseline;
+  gap: calc(0.5rem + 0.5vw);
+  padding: calc(2rem + 0.5vw);
+  width: 80%;
+  z-index: 99;
+  top: -50%;
+  left: calc(10% + 0.5vw);
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  a {
+    text-align: left;
+    width: 100% !important;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.678);
+    font-weight: 400;
+    font-size: calc(1rem + 0.5vw);
+  }
+  a:hover {
+    color: #000;
+  }
+  .user-login {
+    background-color: #e8c900;
+
+    box-shadow: 0px 1px 2px #00000032;
+    width: calc(9rem + 0.5vw)!important;
+    height: calc(2rem + 0.5vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.2s linear;
+    cursor: pointer;
+    a {
+      color: #eeeeee;
+      width: 70%;
+      text-align: center;
+      font-size: calc(1rem + 0.5vw);
+    }
+    &:hover a {
+      color: #ffffff;
+    }
+    i {
+      padding-left: 5px;
+      color: #eeeeee;
+    }
+    &:hover i {
+      color: #ffffff;
+    }
+  }
+  &.goUp{
+    animation: go_up_animation .8s forwards ease-in-out;
+  }
+  &.goDown{
+    animation: go_down_animation .8s forwards ease-in-out;
+  }
+}
+
+@keyframes go_down_animation {
+  0%{
+    top: -50%;
+  }
+  100%{
+    top: 8%;
+  }
+}
+@keyframes go_up_animation {
+  0%{
+    top: 8%;
+  }
+  100%{
+    top: -50%;
+  }
+}
+
+@keyframes turn_45_deg {
+  0% {
+    transform: rotate(0);
+    top: 15px;
+  }
+  100% {
+    top: 25px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes turn_45_deg_oposite {
+    0% {
+      top: 25px;
+      transform: rotate(45deg);
+    }
+    100% {
+        top: 15px;
+        transform: rotate(0);
+    }
+  }
+
+@keyframes opacity_none {
+  0% {
+    top: 25px;
+    opacity: 1;
+  }
+  100% {
+    top: 20px;
+    opacity: 0;
+  }
+}
+@keyframes opacity_none_oposite {
+    0% {
+        top: 25px;
+        opacity: 0;
+    }
+    100% {
+      top: 25px;
+      opacity: 1;
+    }
+  }
+@keyframes turn_oposite_45_deg {
+  0% {
+    top: 35px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 25px;
+    transform: rotate(-45deg);
+  }
+}
+@keyframes turn_oposite_45_deg_oposite {
+    0% {
+        top: 25px;
+      transform: rotate(-45deg);
+    }
+    100% {
+        top: 35px;
+        transform: rotate(0);
+    }
+}
+
+@media screen and (max-width: 980px) {
+  nav:nth-child(1) {
+    .right-side {
+      width: 680px;
+      a {
+        width: 74px !important;
+        font-size: calc(0.5rem + 0.5vw) !important;
+      }
+      .user-login {
+        width: 131px !important;
+        a {
+          font-size: calc(0.5rem + 0.5vw);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .row{
+    nav:nth-child(1){
+      display: none;
+    }
+    nav:nth-child(2){
+      display: flex;
+    }
+  }
+  .absolute_menu{
+    display: flex !important;
+  }
+}
+
+@media screen and (max-width:540px) {
+  .row{
+    nav:nth-child(2) {
+      img {
+        width: 22%;
+      }
+      .hanburger-menu {
+        cursor: pointer;
+        div {
+          height: calc(0.04rem + 0.45vw);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<div class="row">
+    <nav>
+        <img src="https://urc.az/Public/img/logo/logo.png" alt="">
+        <div class="right-side">
+            <a [routerLink]="['/']" routerLinkActive="router-link-active">Əsas səhifə</a>
+            <a href="#urc">URC</a>
+            <a href="#services">Xidmətlər</a>
+            <a href="#news">Xəbərlər</a>
+            <a href="#customers">Müştərilər</a>
+            <a href="#statics">Statistika</a>
+            <a [routerLink]="['/contact']" routerLinkActive="router-link-active" >Əlaqə</a>
+            <div class="user-login">
+                <i class="fa-solid fa-door-open"></i>
+                <a href="http://user.urc.az">Müştəri girişi</a>
+            </div>
+        </div>
+    </nav>
+    <nav>
+        <img src="https://urc.az/Public/img/logo/logo.png" alt="">
+        <div id="hanburger_menu" (click)="handleOnclick()" class="hanburger-menu">
+            <div [class.active]="menuOpnener" [class.passive]="menuCloser" id="1"></div>
+            <div [class.active]="menuOpnener" [class.passive]="menuCloser" id="2"></div>
+            <div [class.active]="menuOpnener" [class.passive]="menuCloser" id="3"></div>
+        </div>
+    </nav>
+</div>
+<div class="absolute_menu" [class.goDown]="goDown" [class.goUp]="goUp">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" >Əsas səhifə</a>
+    <a href="#urc">URC</a>
+    <a href="#services">Xidmətlər</a>
+    <a href="#news">Xəbərlər</a>
+    <a href="#customers">Müştərilər</a>
+    <a href="#statics">Statistika</a>
+    <a [routerLink]="['/contact']" routerLinkActive="router-link-active" >Əlaqə</a>
+    <div class="user-login">
+        <i class="fa-solid fa-door-open"></i>
+        <a href="http://user.urc.az">Müştəri girişi</a>
+    </div>
+</div>

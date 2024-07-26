@@ -1,0 +1,50 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <h1>Əlaqə</h1>
+            <form [formGroup]="form" (ngSubmit)="handleSubmit()">
+                <div class="inputs">
+                    <div class="input_container">
+                        <label for="">
+                            <p>Ad</p>
+                            <div class="error_message" *ngIf="f['name'].touched && f['name'].errors">
+                                <small *ngIf="f['name'].errors?.['required']">*Ad boş olmamalıdır.</small>
+                                <small *ngIf="f['name'].errors?.['pattern']">*Zəhmət olmasa keçərli ad yazın.</small>
+                            </div>
+                        </label>
+                        <input [class.invalid]="f['name'].touched && f['name'].errors"  formControlName="name"  required placeholder="Ad" type="text">
+                    </div>
+                    <div class="input_container">
+                        <label for="">
+                            <p>Email</p>
+                            <div class="error_message" *ngIf=" f['email']?.invalid && ( f['email']?.dirty ||  f['email']?.touched)">
+                                <small *ngIf=" f['email'].errors?.['email']">*Zəhmət olmasa keçərli email yazın.</small>
+                                <small *ngIf=" f['email'].errors?.['required']">*Zəhmət olmasa email yazın.</small>
+                            </div>
+                        </label>
+                        <input [class.invalid]="f['email'].touched && f['email'].errors"  formControlName="email"  required placeholder="Email" type="email">
+                    </div>
+                    <div class="input_container">
+                        <label for="">
+                            <p>Mövzu</p>
+                            <div class="error_message" *ngIf="f['subject']?.invalid && (f['subject']?.dirty ||  f['subject']?.touched)">
+                                <small *ngIf="f['subject'].errors?.['required']">*Zəhmət olmasa mövzunun adını yazın.</small>
+                            </div>
+                        </label>
+                        <input [class.invalid]="f['subject'].touched && f['subject'].errors"  formControlName="subject"   required placeholder="Mövzu daxil edin" type="text">
+                    </div>
+                    <div class="input_container">
+                        <label for="">
+                            <p>Mövzu</p>
+                            <div class="error_message" *ngIf="f['message']?.invalid && (f['message']?.dirty ||  f['message']?.touched)">
+                                <small *ngIf="f['message'].errors?.['required']">*Mesaj bölməsi boş olmamalıdır.</small>
+                            </div>
+                        </label>
+                        <textarea [class.invalid]="f['message'].touched && f['message'].errors" formControlName="message"  required placeholder="Mesaj daxil edin"></textarea>
+                    </div>
+                </div>
+                <button type="submit">Müraciət et</button>
+            </form>
+        </div>
+    </div>
+</section>

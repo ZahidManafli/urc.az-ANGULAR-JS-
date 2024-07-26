@@ -1,0 +1,26 @@
+<div class="news">
+    <div [style.background-image]="news.img_url" class="image">
+        <div class="date">
+            {{ news.date }}
+        </div>
+    </div>
+    <div class="content">
+        <h3>{{ news.topic_head }}</h3> <br>
+        <p>{{ news.news }}</p>
+    </div>
+    <a href="">Ətraflı</a>
+  <!-- <div *ngIf="news.all_text_of_news">
+    <h3>{{ news.all_text_of_news.heading }}</h3>
+    <ul>
+      <li *ngFor="let feature of objectKeys(news.all_text_of_news.features)">
+        {{ news.all_text_of_news.features[feature] }}
+      </li>
+    </ul>
+    <p [innerHTML]="news.all_text_of_news.text"></p>
+    <div>
+      <p>{{ news.all_text_of_news.contact.location }}</p>
+      <p>{{ news.all_text_of_news.contact.phone_number }}</p>
+    </div>
+    <p>{{ news.all_text_of_news.hashtags }}</p>
+  </div> -->
+</div>

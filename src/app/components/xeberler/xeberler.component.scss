@@ -1,0 +1,153 @@
+.row{
+    width: 100%;
+    padding: calc(3rem + 0.5vw) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(2rem + 0.5vw);
+
+    h1{
+        font-weight: 400;
+        font-size: calc(1.8rem + 0.5vw);
+    }
+
+    .news{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .new{
+            width: 32%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #00000032;
+            .image{
+                width: 100%;
+                height: 260px;
+                position: relative;
+
+                .date{
+                    background-color: #e8c900;
+                    position: absolute;
+                    bottom: calc(-1.5rem + 0.5vw);
+                    width: calc(9rem + 0.5vw);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: calc(1rem + 0.5vw);
+                    color: white;
+                    height: calc(2rem + 0.5vw);
+                    border-radius: 5px;
+                }
+            }
+            .content{
+                padding: calc(1.5rem + 0.5vw) calc(1rem + 0.5vw) calc(4rem + 0.5vw) calc(1rem + 0.5vw);
+                display: flex;
+                flex-direction: column;
+
+                h3{
+                    font-size: calc(0.4rem + 0.5vw);
+                }
+                p{
+                    font-size: calc(0.4rem + 0.5vw);
+                }
+            }
+        }
+        .new:nth-child(1) .image{
+            background: url(https://urc.az/Public/img/news/main/7ff019c3-87af-4e07-96d0-1631487c592c1709187050440.jpeg);
+            background-size: cover;
+            background-position: 0% 54%;
+        }
+        .new:nth-child(2) .image{
+            background: url(https://urc.az/Public/img/news/main/b926e8d2-cd60-464c-a013-aecdb04d443c1707891363600.jpeg);
+            background-size: cover;
+            background-position: 0% 37%;
+        }
+        .new:nth-child(3) .image{
+            background: url(https://urc.az/Public/img/news/main/5b537c27-ff18-45cf-8686-e65e514abc91Screenshot%202023-12-11%20at%2018.07.24.png);
+            background-size: cover;
+            background-position: 55% 55%;
+        }
+    }
+    button{
+        background-color: #e8c900;
+        
+        box-shadow: 0px 1px 2px #00000032;
+        width: calc((850px/6) + 21px) !important;
+        height: calc(2rem + 0.5vw);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        font-size: calc(1rem + 0.5vw);
+        cursor: pointer;
+        border: none;
+        a{
+            color: #eeeeee;
+            text-decoration: none;
+        }
+        &:hover{
+            color: #ffffff;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (max-width:980px) {
+    .row{
+        .news{
+            width:750px !important;
+            .new{
+                width: 240px !important;
+
+                .image{
+                    height: 180px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .row{
+        .news{
+            width:100% !important;
+            flex-direction: column;
+            gap: calc(1rem + 0.5vw);
+            .new{
+                width: 100% !important;
+                .image{
+                    height: 310px !important;
+                    .date{
+                        width: calc(7rem + 0.5vw);
+                        font-size: calc(0.8rem + 0.5vw);
+                        bottom: calc(-1.3rem + 0.5vw);
+                    }
+                }
+                .content{
+                    h3{
+                        font-size: calc(0.7rem + 0.5vw);
+                    }
+                    p{
+                        font-size: calc(0.6rem + 0.5vw);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    .row{
+        .news{
+            .new{
+                .image{
+                    height: 220px !important;
+                    .date{
+                        bottom: calc(-1rem + 0.5vw);
+                    }
+                }
+            }
+        }
+    }
+}

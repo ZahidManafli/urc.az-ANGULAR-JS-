@@ -1,0 +1,107 @@
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(2rem + 0.5vw);
+    padding: calc(3rem + 0.5vw);
+
+    h1{
+        font-size: calc(2rem + 0.5vw);
+        font-weight: 400;
+    }
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        #top_p{
+            width: 45%;
+            font-size: calc(1rem + 0.5vw);
+            letter-spacing: 0.1rem;
+            font-weight: 400;
+        }
+
+        .fealiyyet{
+            display: flex;
+            flex-direction: column;
+            gap: calc(1rem + 0.5vw);
+            width: 50%;
+
+            p{
+                width: 100% !important;
+                font-weight: 400;
+                text-decoration:underline;
+                font-size: calc(0.5rem + 0.5vw);
+            }
+
+            .icons{
+                width: 100%;
+                display: grid;
+                gap: calc(1rem + 0.5vw);
+                grid-template-columns: repeat(4,auto);
+                grid-template-rows: repeat(3,70px);
+
+                .icon{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    img{
+                        width: 40%;
+                        height: 85%;
+                    }
+                    p{
+                        width: 100% !important;
+                        text-align: center;
+                        font-weight: 400;
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:980px) {
+    .row{
+        .content{
+            .fealiyyet{
+                .icons{
+                    grid-template-columns: repeat(3,auto);
+                    grid-template-rows: repeat(4,70px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .row{
+        .content{
+            flex-direction: column;
+            gap: calc(2rem + 0.5vw);
+            #top_p{
+                font-size: calc(0.8rem + 0.5vw);
+                width: 100%;
+            }
+            .fealiyyet{
+                width: 100%;
+                p{
+                    font-size: calc(0.8rem + 0.5vw);
+                }
+                .icons{
+                    grid-template-columns: repeat(3,auto);
+                    grid-template-rows: repeat(4,70px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    .row{
+        padding: calc(1rem + 0.5vw) 0; 
+    }
+}

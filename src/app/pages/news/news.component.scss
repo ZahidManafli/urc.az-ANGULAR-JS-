@@ -1,0 +1,31 @@
+.news-items{
+    margin: 0 auto;
+    padding: calc(3rem + 0.5vw) 0;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+
+    .news-container{
+        width: 30.6%;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #00000032;
+    }
+}
+
+@media screen and (max-width:980px) {
+        .news-items{
+            width:750px !important;
+        }
+}
+
+@media screen and (max-width:768px) {
+    .news-items{
+        width: 80% !important;
+        flex-direction: column;
+        gap: calc(1rem + 0.5vw);
+        .news-container{
+            width: 100% !important;
+        }
+    }
+}

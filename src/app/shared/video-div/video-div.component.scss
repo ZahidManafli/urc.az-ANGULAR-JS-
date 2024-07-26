@@ -1,0 +1,55 @@
+.row{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    video{
+        width: 100%;
+        height: calc(13rem + 0.5vw);
+        object-fit: cover;
+    }
+    .content{
+        position: absolute;
+        color: white;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: calc(1rem + 0.5vw);
+
+        p{
+            width:45%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: calc(1rem + 0.5vw);
+            margin-top: calc(2rem + 0.5vw);
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            text-align: right;
+            font-size: calc(1rem + 0.5vw);
+            transition: 0.5s;
+            padding-right: calc(1rem + 0.5vw);
+            margin-top: calc(1rem + 0.5vw);
+            &:hover{
+                color: yellow;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    .row{
+        .content{
+            p{
+                width: 80%;
+            }
+            a{
+                margin-top: 0;
+            }
+        }
+    }
+}

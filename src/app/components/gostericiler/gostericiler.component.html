@@ -1,0 +1,33 @@
+<div class="row">
+    <h1>Göstəricilərimiz</h1>
+    <div class="infos">
+        <div class="info">
+            <h2  id="experince">10+</h2>
+            <p>İllik Təcrübə</p>
+        </div>
+        <ng-container *ngFor="let item of datas">
+            <div class="info">
+                <h2  id="experince">{{item.count}}</h2>
+                <p>{{item.name}}</p>
+            </div>
+        </ng-container>
+    
+        <!-- <div class="info">
+            <h2 id="projects">114</h2>
+            <p>Layihə</p>
+        </div>
+        <div class="info">
+            <h2 id="erp_module">47</h2>
+            <p>ERP Modulu</p>
+        </div>
+        <div class="info">
+            <h2 id="hr_module">23</h2>
+            <p>HR Modulu</p>
+        </div> -->
+    </div>
+    <div class="bottom">
+        <h3>Texnologiyalar</h3>
+        <p>1C/ ERP | Attendance | Timesheet | Biometric Devices | Tourniquets | C# / .Net | ASP. Net I .Net Core | Java | JavaScript | Angular | Typescript Ajax | Jquery | Salesforce | Databases (Oracle | SOL Server | MySQL) | Bootstrap | Tailwind</p>
+    </div>
+</div>
+<script src="./script.js"></script>

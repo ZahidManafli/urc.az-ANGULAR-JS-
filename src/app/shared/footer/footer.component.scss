@@ -1,0 +1,131 @@
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(3rem + 0.5vw);
+    padding: calc(3rem + 0.5vw) 0;
+
+    .top{
+        width: 100%;
+        display: flex;
+
+        .left-side{
+            width: 35%;
+    
+            height: calc(10rem + 0.5vw);
+    
+            img{
+                width: 40%;
+            }
+        }
+        .right-side{
+            display: flex;
+            width: 65%;
+            justify-content: space-between;
+    
+            .contact{
+                width: 48%;
+                background: #e8c900;
+                padding: calc(1.5rem + 0.5vw);
+                color: white;
+                font-size: calc(0.8rem + 0.5vw);
+                border-radius: 10px;
+            }
+    
+            .location{
+                width: 48%;
+            }
+        }
+    }
+    .bottom{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+            width: 30%;
+            text-align: left;
+            font-weight: 300;
+        }
+
+        .social-medias{
+            width: 30%;
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            gap: calc(0.5rem + 0.5vw);
+
+            a{
+                color: #abadbe;
+                i:hover{
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .row{    
+        .top{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            .left-side{
+                width: 100%;        
+                img{
+                    width: 40%;
+                }
+            }
+            .right-side{
+                width: 100%;                
+            }
+        }
+        .bottom{
+            p{
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    .row{    
+        .top{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            .left-side{
+                width: 100%;        
+                img{
+                    width: 40%;
+                }
+            }
+            .right-side{
+                flex-direction: column;
+                width: 100%;
+                gap: calc(1rem + 0.5vw);
+                .contact{
+                    width: 100%;
+                }                
+                .location{
+                    width: 100%;
+                }
+            }
+        }
+        .bottom{
+            flex-direction: column;
+            gap: calc(1rem + 0.5vw);
+            p{
+                width: 100%;
+                text-align: center;
+            }
+            .social-medias{
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

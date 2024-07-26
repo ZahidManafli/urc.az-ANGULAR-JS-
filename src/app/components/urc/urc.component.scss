@@ -1,0 +1,934 @@
+.row{
+    height: calc(80vh + 0.5rem);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .left-side{ //984px responsive
+        height: 300px;
+        z-index: 1;
+        width: calc(27.5rem + 0.5vw);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+        .white-circle{
+            width: calc(9rem + 0.5vw);
+            height: calc(9rem + 0.5vw);
+            border-radius: 50%;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 3vmin rgba(0, 0, 0, 0.1);
+            background-color: white;
+            .inner-white-circle{
+                width: calc(6rem + 0.5vw);
+                height: calc(6rem + 0.5vw);
+                border-radius: 50%;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 0.15rem solid #e8c900;
+
+                .orange_circle{
+                    width: calc(3rem + 0.5vw);
+                    height: calc(3rem + 0.5vw);
+                    background-color: #e8c900;
+                    border-radius: 50%;
+                    z-index: 2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    i{
+                        color: white;
+                        font-size: calc(1rem + 0.5vw);
+                    }
+                }
+            }
+        }
+        div:nth-child(2){
+            position: absolute;
+            z-index: -1;
+            width: calc(9rem + 0.5vw);
+            height: calc(8rem + 0.5vw);
+            border-bottom: 0.15rem dashed #e8c900;
+            border-right:  0.15rem dashed #e8c900;
+            right: calc(13.5rem + 0.5vw);
+            bottom: calc(9rem + 0.5vw);
+            &::before{
+                content: "";
+                width: calc(0.05rem + 0.5vw);
+                height: calc(0.05rem + 0.5vw);
+                border-radius: 50%;
+                border: 0.15rem solid #e8c900;
+                position: absolute;
+                background-color: white;
+                left: 0;
+                top: calc(9rem + 0.5vw);
+                z-index: 1;
+                animation: circle_1 4s infinite ease-in-out;
+            }
+            &::after{
+                content: "";
+                width: calc(0.05rem + 0.5vw);
+                height: calc(0.05rem + 0.5vw);
+                border-radius: 50%;
+                border: 0.15rem solid #e8c900;
+                position: absolute;
+                background-color: white;
+                right: calc(-10rem);
+                top: 0;
+                z-index: 1;
+                animation: circle_after_1 3s infinite ease-in-out;
+            }
+        }
+        div:nth-child(3){
+            position: absolute;
+            z-index: -1;
+            width: calc(12.5rem + 0.5vw);
+            height: calc(2rem + 0.5vw);
+            border-left:0.15rem dashed #e8c900;
+            border-bottom: 0.15rem dashed #e8c900;
+            border-right:  0.15rem dashed #e8c900;
+            left: calc(7rem + 0.5vw);
+            bottom: calc(12.5rem + 0.5vw);
+            &::before{
+                content: "";
+                width: calc(0.05rem + 0.5vw);
+                height: calc(0.05rem + 0.5vw);
+                border-radius: 50%;
+                border: 0.15rem solid #e8c900;
+                position: absolute;
+                background-color: white;
+                left: calc(1rem + 0.5vw);
+                top: 0;
+                z-index: 1;
+                animation: circle_2 4s infinite ease-in-out;
+            }
+            &::after{
+                content: "";
+                width: calc(0.05rem + 0.5vw);
+                height: calc(0.05rem + 0.5vw);
+                border-radius: 50%;
+                border: 0.15rem solid #e8c900;
+                position: absolute;
+                background-color: white;
+                right: calc(1rem + 0.5vw);
+                top: 0;
+                z-index: 1;
+                animation: circle_after_2 4s infinite ease-in-out;
+            }
+        }
+        div:nth-child(4){
+            position: absolute;
+            z-index: -1;
+            width: calc(9rem + 0.5vw);
+            height: calc(8rem + 0.5vw);
+            border-left:0.15rem dashed #e8c900;
+            border-top: 0.15rem dashed #e8c900;
+            left: calc(13.8rem + 0.5vw);
+            top: calc(9rem + 0.5vw);
+            &::before{
+                content: "";
+                width: calc(0.05rem + 0.5vw);
+                height: calc(0.05rem + 0.5vw);
+                border-radius: 50%;
+                border: 0.15rem solid #e8c900;
+                position: absolute;
+                background-color: white;
+                right: 0;
+                top: calc(-0.5rem + 0.5vw);
+                z-index: 1;
+                animation: circle_3 4s infinite ease-in-out;
+            }
+            &::after{
+                content: "";
+                width: calc(0.05rem + 0.5vw);
+                height: calc(0.05rem + 0.5vw);
+                border-radius: 50%;
+                border: 0.15rem solid #e8c900;
+                position: absolute;
+                background-color: white;
+                left: calc(-0.3rem + 0.5vw);
+                bottom: 0%;
+                z-index: 1;
+                animation: circle_after_3 4s infinite ease-in-out;
+            }
+        }
+        div:nth-child(5){
+            position: absolute;
+            z-index: -1;
+            width: calc(12.5rem + 0.5vw);
+            height: 35px;
+            border-left:0.15rem dashed #e8c900;
+            border-top: 0.15rem dashed #e8c900;
+            border-right:  0.15rem dashed #e8c900;
+            left: calc(7rem + 0.5vw);
+            top: calc(12rem + 0.5vw);
+            &::before{
+                content: "";
+                width: calc(0.05rem + 0.5vw);
+                height: calc(0.05rem + 0.5vw);
+                border-radius: 50%;
+                border: 0.15rem solid #e8c900;
+                position: absolute;
+                background-color: white;
+                right: calc(-0.5rem + 0.5vw);
+                bottom: 0;
+                z-index: 1;
+                animation: circle_4 3s infinite ease-in-out;
+            }
+            &::after{
+                content: "";
+                width: calc(0.05rem + 0.5vw);
+                height: calc(0.05rem + 0.5vw);
+                border-radius: 50%;
+                border: 0.15rem solid #e8c900;
+                position: absolute;
+                background-color: white;
+                left: calc(-0.5rem + 0.5vw);
+                bottom: 0;
+                z-index: 1;
+                animation: circle_after_4 4s infinite ease-in-out;
+            }
+        }
+        .image{
+            width: 60px;
+            height: 60px;
+            background-color: #e8c900;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 125%;
+            }
+            // display: none;
+        }
+        .image:nth-child(6){
+            left: 50px;
+            // display: none;
+        }
+        .image:nth-child(7){
+            left: calc(5.3rem + 0.5vw);
+            top: 12px;
+        }
+        .image:nth-child(8){
+            top: calc(-2rem + 0.5vw);
+            left: calc(11.8rem + 0.5vw);
+        }
+        .image:nth-child(9){
+            right: calc(5.5rem + 0.5vw);
+            top: 12px;
+        }
+        .image:nth-child(10){
+            right: 50px;
+        }
+        .image:nth-child(11){
+            right: calc(5.5rem + 0.5vw);
+            bottom: 23px;
+        }
+        .image:nth-child(12){
+            bottom: calc(-2rem + 0.5vw);
+            right: calc(11.5rem + 0.5vw);
+        }
+        .image:nth-child(13){
+            left: calc(5.2rem + 0.5vw);
+            bottom: 23px;
+        }
+    }
+    p{
+        font-size: calc(1rem + 0.5vw);
+        width: 33vw;
+        color: #000000be;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (min-width:981px) {
+    @keyframes circle_1 {
+        0%{
+            top: calc(7.5rem + 0.5vw);
+            left: 0;
+        }
+        25%{
+            top: calc(7.5rem + 0.5vw);
+            left: 0; 
+        }
+        50%{
+            top: calc(7.5rem + 0.5vw);
+            left: 0;
+        }
+        100%{
+            top: calc(7.5rem + 0.5vw);
+            left: 100%;
+        }
+    }
+    
+    @keyframes circle_after_1 {
+        0%{
+            right: calc(-0.83rem + 0.5vw);
+            top: 0%;
+        }
+        25%{
+            right: calc(-0.83rem + 0.5vw);
+            top: 0%;
+        }
+        50%{
+            right: calc(-0.83rem + 0.5vw);
+            top: 0%;
+        }
+        100%{
+            right: calc(-0.83rem + 0.5vw);
+            top: 100%;
+        }
+    }
+    @keyframes circle_after_2 {
+        0%{
+            right: calc(-0.83rem + 0.5vw);
+                    top: 0%;
+        }
+        25%{
+            right: calc(-0.83rem + 0.5vw);
+                    top: 0%;
+        }
+        50%{
+            right: calc(-0.83rem + 0.5vw);
+                    top: 0%;
+        }
+        75%{
+            right: calc(-0.83rem + 0.5vw);
+                    top: calc(1.5rem + 0.5vw);
+        }
+        100%{
+            right: calc(5rem + 0.5vw);
+            top: calc(1.5rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_after_3 {
+        0%{
+            left: calc(-0.83rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            left: calc(-0.83rem + 0.5vw);
+            bottom: 0%;
+        }
+        50%{
+            left: calc(-0.83rem + 0.5vw);
+            bottom: 0%;
+        }
+        100%{
+            left: calc(-0.83rem + 0.5vw);
+            bottom: 100%;
+        }
+    }
+    @keyframes circle_after_4 {
+        0%{
+            left: calc(-0.83rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            left: calc(-0.83rem + 0.5vw);
+            bottom: 0%;
+        }
+        50%{
+            left: calc(-0.83rem + 0.5vw);
+            bottom: 0%;
+        }
+        75%{
+            left: calc(-0.83rem + 0.5vw);
+            bottom: calc(1.3rem + 0.5vw);
+        }
+        100%{
+            left: calc(5rem + 0.5vw);
+            bottom: calc(1.3rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_2 {
+        0%{
+            left: calc(-0.83rem + 0.5vw);
+            top: 0%;
+        }
+        25%{
+            left: calc(-0.83rem + 0.5vw);
+            top: 0%; 
+        }
+        50%{
+            left: calc(-0.83rem + 0.5vw);
+            top: calc(1.5rem + 0.5vw);
+        }
+        100%{
+            top: calc(1.5rem + 0.5vw);
+            left: calc(7rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_3 {
+        0%{
+            right: 0%;
+            top: calc(-0.83rem + 0.5vw);
+        }
+        25%{
+            right: 0%;
+            top: calc(-0.83rem + 0.5vw);
+        }
+        50%{
+            right: 0%;
+            top: calc(-0.83rem + 0.5vw);
+        }
+        100%{
+            right: 100%;
+            top: calc(-0.83rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_4 {
+        0%{
+            right: calc(-0.83rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            right: calc(-0.83rem + 0.5vw);
+                    bottom: 0%; 
+        }
+        50%{
+            right: calc(-0.83rem + 0.5vw);
+                    bottom: 0%;
+        }
+        75%{
+            right: calc(-0.83rem + 0.5vw);
+            bottom: calc(1.3rem + 0.5vw);
+        }
+        100%{
+            right: calc(4rem + 0.5vw);
+            bottom: calc(1.3rem + 0.5vw);
+        }
+    }
+}
+
+// max-width:980px
+
+@media screen and (max-width:980px) {
+    @keyframes circle_1 {
+        0%{
+            top: calc(7.65rem + 0.5vw);
+            left: 0;
+        }
+        25%{
+            top: calc(7.65rem + 0.5vw);
+            left: 0; 
+        }
+        50%{
+            top: calc(7.65rem + 0.5vw);
+            left: 0;
+        }
+        100%{
+            top: calc(7.65rem + 0.5vw);
+            left: 100%;
+        }
+    }
+    
+    @keyframes circle_after_1 {
+        0%{
+            right: calc(-0.67rem + 0.5vw);
+            top: 0%;
+        }
+        25%{
+            right: calc(-0.67rem + 0.5vw);
+            top: 0%;
+        }
+        50%{
+            right: calc(-0.67rem + 0.5vw);
+            top: 0%;
+        }
+        100%{
+            right: calc(-0.67rem + 0.5vw);
+            top: 100%;
+        }
+    }
+    @keyframes circle_after_2 {
+        0%{
+            right: calc(-0.67rem + 0.5vw);
+                    top: 0%;
+        }
+        25%{
+            right: calc(-0.67rem + 0.5vw);
+                    top: 0%;
+        }
+        50%{
+            right: calc(-0.67rem + 0.5vw);
+                    top: 0%;
+        }
+        75%{
+            right: calc(-0.67rem + 0.5vw);
+                    top: calc(1.65rem + 0.5vw);
+        }
+        100%{
+            right: calc(5rem + 0.5vw);
+            top: calc(1.65rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_after_3 {
+        0%{
+            left: calc(-0.67rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            left: calc(-0.67rem + 0.5vw);
+            bottom: 0%;
+        }
+        50%{
+            left: calc(-0.67rem + 0.5vw);
+            bottom: 0%;
+        }
+        100%{
+            left: calc(-0.67rem + 0.5vw);
+            bottom: 100%;
+        }
+    }
+    @keyframes circle_after_4 {
+        0%{
+            left: calc(-0.67rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            left: calc(-0.67rem + 0.5vw);
+            bottom: 0%;
+        }
+        50%{
+            left: calc(-0.67rem + 0.5vw);
+            bottom: 0%;
+        }
+        75%{
+            left: calc(-0.67rem + 0.5vw);
+            bottom: calc(1.5rem + 0.5vw);
+        }
+        100%{
+            left: calc(5rem + 0.5vw);
+            bottom: calc(1.5rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_2 {
+        0%{
+            left: calc(-0.67rem + 0.5vw);
+            top: 0%;
+        }
+        25%{
+            left: calc(-0.67rem + 0.5vw);
+            top: 0%; 
+        }
+        50%{
+            left: calc(-0.67rem + 0.5vw);
+            top: calc(1.65rem + 0.5vw);
+        }
+        100%{
+            top: calc(1.65rem + 0.5vw);
+            left: calc(7rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_3 {
+        0%{
+            right: 0%;
+            top: calc(-0.67rem + 0.5vw);
+        }
+        25%{
+            right: 0%;
+            top: calc(-0.67rem + 0.5vw);
+        }
+        50%{
+            right: 0%;
+            top: calc(-0.67rem + 0.5vw);
+        }
+        100%{
+            right: 100%;
+            top: calc(-0.67rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_4 {
+        0%{
+            right: calc(-0.67rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            right: calc(-0.67rem + 0.5vw);
+                    bottom: 0%; 
+        }
+        50%{
+            right: calc(-0.67rem + 0.5vw);
+                    bottom: 0%;
+        }
+        75%{
+            right: calc(-0.67rem + 0.5vw);
+            bottom: calc(1.5rem + 0.5vw);
+        }
+        100%{
+            right: calc(4rem + 0.5vw);
+            bottom: calc(1.5rem + 0.5vw);
+        }
+    }
+
+    .row{
+        justify-content: center !important;
+        p{
+            font-size: calc(0.7rem + 0.5vw) !important;
+            width: 27.8% !important;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    @keyframes circle_after_1 {
+        0%{
+            right: calc(-0.60rem + 0.5vw);
+            top: 0%;
+        }
+        25%{
+            right: calc(-0.60rem + 0.5vw);
+            top: 0%;
+        }
+        50%{
+            right: calc(-0.60rem + 0.5vw);
+            top: 0%;
+        }
+        100%{
+            right: calc(-0.60rem + 0.5vw);
+            top: 100%;
+        }
+    }
+    @keyframes circle_after_3 {
+        0%{
+            left: calc(-0.60rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            left: calc(-0.60rem + 0.5vw);
+            bottom: 0%;
+        }
+        50%{
+            left: calc(-0.60rem + 0.5vw);
+            bottom: 0%;
+        }
+        100%{
+            left: calc(-0.60rem + 0.5vw);
+            bottom: 100%;
+        }
+    }
+    @keyframes circle_after_4 {
+        0%{
+            left: calc(-0.60rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            left: calc(-0.60rem + 0.5vw);
+            bottom: 0%;
+        }
+        50%{
+            left: calc(-0.60rem + 0.5vw);
+            bottom: 0%;
+        }
+        75%{
+            left: calc(-0.60rem + 0.5vw);
+            bottom: calc(1.6rem + 0.5vw);
+        }
+        100%{
+            left: calc(5rem + 0.5vw);
+            bottom: calc(1.6rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_2 {
+        0%{
+            left: calc(-0.60rem + 0.5vw);
+            top: 0%;
+        }
+        25%{
+            left: calc(-0.60rem + 0.5vw);
+            top: 0%; 
+        }
+        50%{
+            left: calc(-0.60rem + 0.5vw);
+            top: calc(1.65rem + 0.5vw);
+        }
+        100%{
+            top: calc(1.65rem + 0.5vw);
+            left: calc(7rem + 0.5vw);
+        }
+    }
+    @keyframes circle_3 {
+        0%{
+            right: 0%;
+            top: calc(-0.60rem + 0.5vw);
+        }
+        25%{
+            right: 0%;
+            top: calc(-0.60rem + 0.5vw);
+        }
+        50%{
+            right: 0%;
+            top: calc(-0.60rem + 0.5vw);
+        }
+        100%{
+            right: 100%;
+            top: calc(-0.60rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_4 {
+        0%{
+            right: calc(-0.60rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            right: calc(-0.60rem + 0.5vw);
+                    bottom: 0%; 
+        }
+        50%{
+            right: calc(-0.60rem + 0.5vw);
+                    bottom: 0%;
+        }
+        75%{
+            right: calc(-0.60rem + 0.5vw);
+            bottom: calc(1.6rem + 0.5vw);
+        }
+        100%{
+            right: calc(4rem + 0.5vw);
+            bottom: calc(1.6rem + 0.5vw);
+        }
+    }
+    .row{
+        height: calc(80vh + 0.5rem);
+        justify-content: center !important;
+        p{
+            font-size: calc(0.8rem + 0.5vw) !important;
+            width: 100% !important;
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    @keyframes circle_after_1 {
+        0%{
+            right: calc(-0.40rem + 0.5vw);
+            top: 0%;
+        }
+        25%{
+            right: calc(-0.40rem + 0.5vw);
+            top: 0%;
+        }
+        50%{
+            right: calc(-0.40rem + 0.5vw);
+            top: 0%;
+        }
+        100%{
+            right: calc(-0.40rem + 0.5vw);
+            top: 100%;
+        }
+    }
+    @keyframes circle_after_2 {
+        0%{
+            right: calc(-0.4rem + 0.5vw);
+                    top: 0%;
+        }
+        25%{
+            right: calc(-0.4rem + 0.5vw);
+                    top: 0%;
+        }
+        50%{
+            right: calc(-0.4rem + 0.5vw);
+                    top: 0%;
+        }
+        75%{
+            right: calc(-0.4rem + 0.5vw);
+                    top: calc(1.7rem + 0.5vw);
+        }
+        100%{
+            right: calc(5rem + 0.5vw);
+            top: calc(1.7rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_after_3 {
+        0%{
+            left: calc(-0.4rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            left: calc(-0.4rem + 0.5vw);
+            bottom: 0%;
+        }
+        50%{
+            left: calc(-0.4rem + 0.5vw);
+            bottom: 0%;
+        }
+        100%{
+            left: calc(-0.4rem + 0.5vw);
+            bottom: 100%;
+        }
+    }
+    @keyframes circle_after_4 {
+        0%{
+            left: calc(-0.4rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            left: calc(-0.4rem + 0.5vw);
+            bottom: 0%;
+        }
+        50%{
+            left: calc(-0.4rem + 0.5vw);
+            bottom: 0%;
+        }
+        75%{
+            left: calc(-0.4rem + 0.5vw);
+            bottom: calc(1.8rem + 0.5vw);
+        }
+        100%{
+            left: calc(5rem + 0.5vw);
+            bottom: calc(1.8rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_2 {
+        0%{
+            left: calc(-0.4rem + 0.5vw);
+            top: 0%;
+        }
+        25%{
+            left: calc(-0.4rem + 0.5vw);
+            top: 0%; 
+        }
+        50%{
+            left: calc(-0.4rem + 0.5vw);
+            top: calc(1.7rem + 0.5vw);
+        }
+        100%{
+            top: calc(1.7rem + 0.5vw);
+            left: calc(6rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_3 {
+        0%{
+            right: 0%;
+            top: calc(-0.4rem + 0.5vw);
+        }
+        25%{
+            right: 0%;
+            top: calc(-0.4rem + 0.5vw);
+        }
+        50%{
+            right: 0%;
+            top: calc(-0.4rem + 0.5vw);
+        }
+        100%{
+            right: 100%;
+            top: calc(-0.4rem + 0.5vw);
+        }
+    }
+    
+    @keyframes circle_4 {
+        0%{
+            right: calc(-0.4rem + 0.5vw);
+            bottom: 0%;
+        }
+        25%{
+            right: calc(-0.4rem + 0.5vw);
+                    bottom: 0%; 
+        }
+        50%{
+            right: calc(-0.4rem + 0.5vw);
+                    bottom: 0%;
+        }
+        75%{
+            right: calc(-0.4rem + 0.5vw);
+            bottom: calc(1.8rem + 0.5vw);
+        }
+        100%{
+            right: calc(4rem + 0.5vw);
+            bottom: calc(1.8rem + 0.5vw);
+        }
+    }
+
+    .row{
+        .left-side{
+            width: calc(19.5rem + 0.5vw);
+            .white-circle{
+                width: calc(7rem + 0.5vw);
+                height: calc(7rem + 0.5vw);
+                .inner-white-circle{
+                    width: calc(5rem + 0.5vw);
+                    height: calc(5rem + 0.5vw);
+                }
+            }
+            div:nth-child(2){
+                width: calc(6rem + 0.5vw);
+                right: calc(9.7rem + 0.5vw);
+            }
+            div:nth-child(3){
+                width: calc(9rem + 0.5vw);
+                height: calc(2rem + 0.5vw);
+                left: calc(5rem + 0.5vw);
+                bottom: calc(11.5rem + 0.5vw);
+            }
+            div:nth-child(4){
+                width: calc(6rem + 0.5vw);
+                left: calc(9.5rem + 0.5vw);
+                top: calc(9.3rem + 0.5vw);
+            }
+            div:nth-child(5){
+                width: calc(9rem + 0.5vw);
+                height: 35px;
+                left: calc(5rem + 0.5vw);
+                top: calc(11.5rem + 0.5vw);
+            }
+            .image{
+                width: 50px;
+                height: 50px;
+                // display: none;
+            }
+            .image:nth-child(6){
+                left: 15px;
+                // display: none;
+            }
+            .image:nth-child(7){
+                left: calc(3.3rem + 0.5vw);
+                top: 41px;
+            }
+            .image:nth-child(8){
+                top: calc(0rem + 0.5vw);
+                left: calc(8rem + 0.5vw);
+            }
+            .image:nth-child(9){
+                right: calc(3.5rem + 0.5vw);
+                top: 41px;
+            }
+            .image:nth-child(10){
+                right: 21px;
+            }
+            .image:nth-child(11){
+                right: calc(3.6rem + 0.5vw);
+                bottom: 41px;
+            }
+            .image:nth-child(12){
+                bottom: calc(0rem + 0.5vw);
+                right: calc(8.2rem + 0.5vw);
+            }
+            .image:nth-child(13){
+                left: calc(3.5rem + 0.5vw);
+                bottom: 41px;
+            }
+        }
+    }
+}
